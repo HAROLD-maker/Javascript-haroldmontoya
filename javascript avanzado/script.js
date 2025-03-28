@@ -62,6 +62,19 @@ document.addEventListener("DOMContentLoaded", function() {
     alert("Documento completamente cargado");
 });
 
+//5. Módulos.
+// Exportar una función
+export function saludar(nombre) {
+    alert(`Hola, ${nombre}!`);
+}
+// Importar la función del módulo
+import { saludar } from './miModulo.js';
+
+// Vincular la función al botón
+document.getElementById("btnSaludar").addEventListener("click", function() {
+    saludar("Harold");
+});
+
 // 6. Programación Asíncrona en JavaScript
 async function obtenerDatos() {
     try {
