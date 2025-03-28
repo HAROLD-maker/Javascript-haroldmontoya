@@ -62,18 +62,26 @@ document.addEventListener("DOMContentLoaded", function() {
     alert("Documento completamente cargado");
 });
 
-//5. Módulos.
-// Exportar una función
-export function saludar(nombre) {
-    alert(`Hola, ${nombre}!`);
-}
-// Importar la función del módulo
-import { saludar } from './miModulo.js';
+//5.  Módulos (Import y Export)
 
-// Vincular la función al botón
-document.getElementById("btnSaludar").addEventListener("click", function() {
-    saludar("Harold");
-});
+//Concepto:
+//Los módulos oermiten dividir el código en archivos reutilizables, mejorando la organizacion y la mantenibilidad.
+//Se pueden exportar e importar funciones, variables o clases entre diferentes archivos.
+
+//Ejemplo:
+
+//(Modulo)
+
+export function sumar(a,b) {
+    return a + b;
+}
+
+//(importancia del modulo)
+
+import {sumar} from "./operaciones.js"
+
+console.log(sumar(3, 5)); // 8
+
 
 // 6. Programación Asíncrona en JavaScript
 async function obtenerDatos() {
